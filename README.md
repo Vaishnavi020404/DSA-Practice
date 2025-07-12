@@ -10,7 +10,9 @@ I am following Kunal Kushwaha's "Java + DSA + Interview Preparation Course" on Y
 - Prepare for product-based and service-based companies
 - Consistent daily coding
 
-- I have already solved a few problems on Leetcode on arrays and other basic concepts on my machine which will be added to this repository shortly.
+---
+
+I have already solved a few problems on Leetcode on arrays and other basic concepts on my machine which will be added to this repository shortly.
 
 ---
 
