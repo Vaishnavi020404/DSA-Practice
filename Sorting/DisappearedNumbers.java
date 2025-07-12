@@ -39,7 +39,9 @@ public class DisappearedNumbers {
         List<Integer> ans=new ArrayList<>();
         int j=0;
         while(j<nums.length){
-            if(nums[j]!=j+1){
+            if(nums[j]!=j+1){ 
+                //if the correct number is not present then that means soem otehr duplicate number is present.for eg:if 5 is the length of the array,if 6 is not present at 5th index then 2,3,1 or 4 must be present(eg:[1,2,3,4,3])
+                //this is the opposite case of finding duplicate numbers(problem no.287) because here we find what is missing and in 287,we find which numbers caused the actual value to be missing i.e.;the the duplicate or extra values.
                 ans.add(j+1);
                 j++;
             }else{

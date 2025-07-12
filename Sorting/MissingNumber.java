@@ -2,7 +2,7 @@
 // Link: https://leetcode.com/problems/missing-number/
 // Contains:
 // 1️⃣ Brute Force Approach: O(n²) Time, O(1) Space
-// 2️⃣ Optimized Approach: Cyclic Sort, O(n) Time, O(1) Space
+ 
 
 import java.util.Scanner;
 public class MissingNumber {
@@ -43,7 +43,6 @@ public class MissingNumber {
     //     }
 
     // 2️⃣ Optimized Cyclic Sort Approach
-    
         static int missingNumber(int[] nums) {
         int i = 0;
         while (i < nums.length) {
@@ -64,6 +63,7 @@ public class MissingNumber {
         }
         return nums.length;
         }
+
 
 
 }
