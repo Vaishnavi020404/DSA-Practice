@@ -1,8 +1,17 @@
-// LeetCode Problem: 442. Find All Duplicates in an Array  
-// Link: https://leetcode.com/problems/find-all-duplicates-in-an-array/  
-// Approach: Cyclic Sort  
-// Time Complexity: O(n)  
-// Space Complexity: O(1) (excluding the space used for the output list)  
+// 4️⃣ Find All Duplicates in an Array (LeetCode 442)
+// Link: https://leetcode.com/problems/find-all-duplicates-in-an-array/
+// Time Complexity: O(n)
+// Space Complexity: O(1) (excluding output list)
+
+// What to Remember & Why:
+
+// Array has numbers from 1 to n → Same range logic as disappeared numbers.
+
+// nums[j] != j + 1 → Identifies duplicates after cyclic sort.
+
+// Return all out-of-place numbers → Leftovers = duplicates.
+
+
 
 import java.util.ArrayList;
 import java.util.List;

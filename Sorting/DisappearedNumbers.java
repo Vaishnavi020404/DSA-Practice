@@ -1,7 +1,16 @@
-// LeetCode Problem: 448. Find All Numbers Disappeared in an Array
+// Find All Disappeared Numbers (LeetCode 448)
 // Link: https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
-// Contains:
-// ✅ Optimized Cyclic Sort Approach: O(n) Time, O(1) Extra Space(ignoring the result list)
+// Time Complexity: O(n)
+// Space Complexity: O(1) (excluding output list)
+
+// What to Remember & Why:
+
+// Array has numbers from 1 to n → That’s why correctIndex = nums[i] - 1.
+
+// No nums[i] < nums.length check needed → Values guaranteed in range.
+
+// nums[j] != j + 1 → Missing numbers appear where this condition is true after sorting.
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

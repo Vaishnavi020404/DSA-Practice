@@ -1,6 +1,15 @@
-// LeetCode Problem: 645. Set Mismatch
+// 5️⃣ Set Mismatch (LeetCode 645)
 // Link: https://leetcode.com/problems/set-mismatch/
-// Approach: Cyclic Sort, O(n) Time, O(1) Space (excluding output array)
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// What to Remember & Why:
+
+// Mix of missing and duplicate number logic → Needs both in one sum.
+
+// CorrectIndex = nums[i] - 1 → Same cyclic sort core idea.
+
+// Careful while writing second loop → Don’t overwrite both values accidentally.
 
 //This sum is a mix of 268 and 442(find the repeated one and the missing one)
 

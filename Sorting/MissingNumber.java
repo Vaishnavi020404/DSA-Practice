@@ -1,7 +1,14 @@
-// LeetCode Problem: 268. Missing Number
 // Link: https://leetcode.com/problems/missing-number/
-// Contains:
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+//ALso contians the brute force method  tried:
 // 1️⃣ Brute Force Approach: O(n²) Time, O(1) Space
+
+// What to Remember & Why:
+// Array contains numbers from 0 to n → 1 number is missing.
+// Check nums[i] < nums.length → Prevents ArrayIndexOutOfBounds as nums[i] can be n.
+// nums[i] != i → That’s how we detect which number is missing.
+
  
 
 import java.util.Scanner;
