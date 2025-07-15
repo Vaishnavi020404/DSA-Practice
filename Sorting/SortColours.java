@@ -65,4 +65,7 @@ public class SortColours {
             nums[c1+c0+l]=2;
         }        
     } 
+
+    //Using Dutch National Flag algorithm->pending to learn
+    
 }
