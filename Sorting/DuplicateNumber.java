@@ -1,16 +1,18 @@
-// ✅ Problem: Find the Duplicate Number (LeetCode 287)
-// https://leetcode.com/problems/find-the-duplicate-number
-// ⚙️ Status: Not Fully Solved Yet (Brute Force + Cyclic Sort Attempt)
-// I attempted this problem using two approaches:
+// // ✅ Problem: Find the Duplicate Number (LeetCode 287)
+// // https://leetcode.com/problems/find-the-duplicate-number
+// // ⚙️ Status: Not Fully Solved Yet (Brute Force + Cyclic Sort Attempt)
+// // I attempted this problem using two approaches:
 
-// Brute Force Method:
-// ✅ Simple nested loop to check every pair.
-// ❌ Time Complexity: O(n²), not efficient for large inputs.
-// ❌ Doesn't work for all edge cases reliably.
+// // Brute Force Method:
+// // ✅ Simple nested loop to check every pair.
+// // ❌ Time Complexity: O(n²), not efficient for large inputs.
+// // ❌ Doesn't work for all edge cases reliably.
 
-// Cyclic Sort Method:
-// ✅ Runs in O(n) time.
-// ❌ Not allowed in this specific problem because it modifies the input array, which the problem restricts
+// // Cyclic Sort Method:
+// // ✅ Runs in O(n) time.
+// // ❌ Not allowed in this specific problem because it modifies the input array, which the problem restricts
+
+// //to be encountered again.(incomplete solution)
 
 
 
