@@ -57,18 +57,19 @@ public class FirstLastPosition {
         int end = nums.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (nums[mid] < target) {
-                start = mid + 1;
-            } else if (nums[mid] > target) {
-                end = mid - 1;
-            } else {
+            if (nums[mid] == target) {
                 ans = mid;
-                if (findStart) {
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
-                }
-            }
+    if (findStart) {
+        end = mid - 1; // Search on left half
+    } else {
+        start = mid + 1; // Search on right half
+    }
+} else if (nums[mid] > target) {
+    end = mid - 1;
+} else {
+    start = mid + 1;  // ✅ THIS IS CORRECT
+}
+
         }
         return ans;
     }
