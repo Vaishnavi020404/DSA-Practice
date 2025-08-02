@@ -46,6 +46,24 @@ Abbreviations used to avoid writing long names for files:
 SIRSA-SearchingInRotatedSortingArray
 SIRSAD-SearchingInRotatedSortingArrayWithDuplicates 
 
+🔹 Problem 33 — LeetCode Search in Rotated Sorted Array
+Input: Distinct integers only
+
+Return Type: int — index of target, or -1 if not found
+
+No duplicates
+
+Binary Search + Pivot logic
+
+🔹Problem 81 — LeetCode Search in Rotated Sorted Array II
+Input: Integers (can contain duplicates)
+
+Return Type: boolean — true if found, false if not
+
+Duplicates allowed
+
+Binary Search + Duplicates Handling
+
 
 ---
 

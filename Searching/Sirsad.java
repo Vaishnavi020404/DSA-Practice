@@ -30,6 +30,7 @@
 // ⏱️ Time Complexity: O(log n) on average; in worst-case (with many duplicates), it can degrade to O(n)
 // 🗃️ Space Complexity: O(1)
 
+// NOTE: I first learned this concept as "SIRSAD" and later realized that LeetCode also has a problem based on it. That's why this file contains two methods: one that I initially wrote while learning (with int return type), and the other one based on LeetCode's requirements (with boolean return type).
 
 import java.util.Scanner;
 
@@ -104,3 +105,6 @@ public class Sirsad {
         return -1;
     }
 }
+
+
+//the funciton written in leetocde:
