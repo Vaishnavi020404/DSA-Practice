@@ -1,3 +1,36 @@
+// Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
+// Problem: LeetCode 81 - Search in Rotated Sorted Array II (With Duplicates)
+
+
+//SIRSAD stand for SearchingInRotatedSortingArrayWithDuplicates which also means Search in Rotated Sorted Array II as per leetcode
+
+
+//
+// ✅ Extension of Leetcode 33:
+// This problem is a direct extension of Leetcode 33 (Search in Rotated Sorted Array), 
+// but here we also need to handle duplicate values — which adds edge cases to the binary search logic.
+//
+// 🧠 Problem Description:
+// You are given an array that is sorted in ascending order but possibly rotated at some pivot.
+// The array may contain duplicate values.
+// Your task is to find the index of a given target in O(log n) time (if possible).
+//
+// 🔁 What I tried earlier (based on Leetcode 33):
+// - First wrote brute-force linear search (O(n)), which worked for small inputs.
+// - Tried finding the pivot using a simple 4-case logic from Leetcode 33 (assuming distinct values).
+// - The pivot logic failed when duplicates were present — especially when start, mid, and end 
+//   were all equal (e.g. [2, 2, 2, 3, 2]) — this breaks the "binary" nature of binary search.
+//
+// ✅ Final Correct Approach (Handles Duplicates):
+// 1. Modified pivot-finding logic to handle duplicates.
+//    - If nums[start] == nums[mid] == nums[end], increment start and decrement end to shrink the range.
+// 2. Once pivot is found, perform binary search in either left or right half based on target.
+// 3. If pivot is not found (array isn't rotated), perform binary search on the entire array.
+//
+// ⏱️ Time Complexity: O(log n) on average; in worst-case (with many duplicates), it can degrade to O(n)
+// 🗃️ Space Complexity: O(1)
+
+
 import java.util.Scanner;
 
 public class Sirsad {

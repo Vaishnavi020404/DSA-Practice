@@ -4,7 +4,6 @@
 
 // Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
 // Problem: LeetCode 33 - Search in Rotated Sorted Array
-// Author: Vaishnavi Pandey
 //
 // Description:
 // You are given an integer array sorted in ascending order, and it may be rotated.

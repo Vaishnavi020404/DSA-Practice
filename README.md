@@ -42,9 +42,10 @@ Feedback and suggestions are welcome!
 ---
 
 Abbreviations used to avoid writing long names for files:
-1.Leetcode 33:
+1.Leetcode 33 and 81:
 SIRSA-SearchingInRotatedSortingArray
-SIRSAD-SearchingInRotatedSortingArrayWithDuplicates
+SIRSAD-SearchingInRotatedSortingArrayWithDuplicates 
+
 
 ---
 
