@@ -163,6 +163,6 @@ public class SearchingInRotatedSortedArray {
 
 // Method 1 is longer but more modular — ideal for clarity and reuse.
 
-// Both are valid. Method 1 = Better for structured thinking. Method 2 = Better for coding interviews or quick implementation.
+// Both are valid. Method 1 = Better for structured thinking and uses int datatype to return the output,Method 2 = Better for coding interviews or quick implementation and reutrns output in boolean format
 
 
