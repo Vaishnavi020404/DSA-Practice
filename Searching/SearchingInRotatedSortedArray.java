@@ -1,3 +1,7 @@
+// SIRSA-SearchingInRotatedSortedArray
+
+
+
 // Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
 // Problem: LeetCode 33 - Search in Rotated Sorted Array
 // Author: Vaishnavi Pandey
@@ -23,7 +27,7 @@
 
 import java.util.Scanner;
 
-public class SearchIngRotatedSortedArray {
+public class SearchingInRotatedSortedArray {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
