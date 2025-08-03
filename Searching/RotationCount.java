@@ -37,7 +37,7 @@ public class RotationCount {
 
         // Find pivot and calculate number of rotations
         int pivot = findPivotWithDuplicates(nums);
-        int rotationCount = (pivot == -1) ? 0 : pivot + 1;
+        int rotationCount = (pivot == -1) ? 0 : pivot +1;
 
         System.out.println("Number of rotations in the array: " + rotationCount);
     }
