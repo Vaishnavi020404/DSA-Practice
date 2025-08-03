@@ -120,49 +120,6 @@ public class SearchingInRotatedSortedArray {
     }
 }
 
-// //method 2 that i actually learned from chatgpt bacuase it gave a shorter code(leetcode solution)
-//     public boolean search(int[] nums, int target) {
-//         int start = 0;
-//         int end = nums.length - 1;
 
-//         while (start <= end) {
-//             int mid = start + (end - start) / 2;
-
-//             // Found the element
-//             if (nums[mid] == target) return true;
-
-//             // Duplicates handling — skip duplicates
-//             if (nums[start] == nums[mid] && nums[mid] == nums[end]) {
-//                 start++;
-//                 end--;
-//             }
-
-//             // Left half is sorted
-//             else if (nums[start] <= nums[mid]) {
-//                 if (nums[start] <= target && target < nums[mid]) {
-//                     end = mid - 1;
-//                 } else {
-//                     start = mid + 1;
-//                 }
-//             }
-
-//             // Right half is sorted
-//             else {
-//                 if (nums[mid] < target && target <= nums[end]) {
-//                     start = mid + 1;
-//                 } else {
-//                     end = mid - 1;
-//                 }
-//             }
-//         }
-
-//         return false;
-//     }
-
-// Method 2 feels shorter because it's more compact — everything is done inside search().
-
-// Method 1 is longer but more modular — ideal for clarity and reuse.
-
-// Both are valid. Method 1 = Better for structured thinking and uses int datatype to return the output,Method 2 = Better for coding interviews or quick implementation and reutrns output in boolean format
 
 
