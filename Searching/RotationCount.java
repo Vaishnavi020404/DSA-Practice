@@ -1,25 +1,20 @@
-
-// Problem Link (Non-Duplicates): https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
-// Problem Link (With Duplicates): https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+// Title: Rotation Count in a Rotated Sorted Array (With Duplicates)
+// Description:
+// Given a sorted and rotated array (possibly containing duplicates),
+// this program determines the number of times the array has been rotated.
+// The rotation count is equal to the index of the minimum element,
+// which is one more than the index of the pivot (maximum element).
 //
-// Problem:
-// You are given a sorted and rotated array. You need to find the number of times it has been rotated.
-// This is equal to the index of the minimum element in the array.
+// Approach:
+// ✅ Use a modified binary search to find the pivot (largest element).
+// ✅ Handle all edge cases including duplicates using proper checks.
+// ✅ If no pivot is found (array is not rotated), return 0.
 //
-
+// Time Complexity: 
+// - O(log n) for distinct elements
+// - O(n) in worst case for duplicates due to linear skips
 //
-// Final Approach:
-// 1. Use a modified binary search to find the pivot (i.e., the largest element).
-// 2. If pivot is found at index `i`, the minimum is at `i + 1`.
-// 3. If pivot not found (array not rotated), return 0.
-//
-// ➕ This logic works for both:
-//   ✅ Arrays with all distinct elements
-//   ✅ Arrays with duplicates (requires extra check for equal elements)
-//
-// Time Complexity: O(log n) for distinct, O(n) in worst case for duplicates
 // Space Complexity: O(1)
-//
 
 import java.util.Scanner;
 
