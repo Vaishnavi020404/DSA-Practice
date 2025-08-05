@@ -1,16 +1,16 @@
 /*
 5/8/25
      Problem: Leetcode 709 - To Lower Case
-    🔗 Link: https://leetcode.com/problems/to-lower-case/
+     Link: https://leetcode.com/problems/to-lower-case/
 
-    👨‍💻 Main Logic:
+     Main Logic:
     - Traverse each character of the string
     - If it's an uppercase letter ('A' to 'Z'), convert to lowercase by adding 32 (ASCII logic)
     - Else, keep the character as is
     - Use StringBuilder for efficient appending
 
     ⏱ Time Complexity: O(n)
-    💾 Space Complexity: O(n)
+    Space Complexity: O(n)
 */
 
 import java.util.*;
