@@ -24,3 +24,13 @@ Strings are sorted in **alphabetical order**, also known as **lexicographical or
 This character-by-character comparison is based on the character's numerical value, specifically its **Unicode value** in Java. For the standard English alphabet, this is the same as alphabetical order.
 
 
+A **vertical scan** is a method for solving the "Longest Common Prefix" problem. Instead of comparing strings to each other, you compare characters at the same position across **all** strings.
+
+### How it Works
+1.  You take the first character of the first string.
+2.  You then check the first character of all other strings in the array.
+3.  If all of them match, you move on to the second character of the first string.
+4.  You repeat the process, checking the second character of all other strings.
+5.  The moment a character does not match across all strings, you stop. The characters you've successfully checked so far form the longest common prefix.
+
+This is often called a **brute-force** approach because it's a straightforward, logical way to solve the problem without any special tricks. The time complexity is $O(N \cdot M)$, where $N$ is the number of strings and $M$ is the length of the shortest string.
