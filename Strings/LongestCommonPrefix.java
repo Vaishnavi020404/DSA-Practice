@@ -60,13 +60,7 @@ public class LongestCommonPrefix {
         
         String prefix=strs[0];
 
-        if(strs.length==1){
-            return strs[0];
-        }
-
-        if(strs.length==0){
-            return "";
-        }
+        if (strs == null || strs.length == 0) return "";
 
         StringBuilder sb=new StringBuilder();
         for(int i=0;i<strs.length;i++){
@@ -84,8 +78,7 @@ public class LongestCommonPrefix {
         }
         return prefix;
     }
-    }
-
+    
     // Second Approach: Optimized using sorting
     static String longestCommonPrefixOptimized(String[] strs) {
         if (strs == null || strs.length == 0) return "";
