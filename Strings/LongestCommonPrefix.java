@@ -25,7 +25,7 @@
        the most different ones far apart).
     3. Compare only those two strings to get the prefix.
 
-  Time Complexity: O(M * log N) due to sorting
+  Time Complexity: O(N * log N) due to sorting
   Space Complexity: O(1)
 */
 
@@ -96,3 +96,26 @@ public class LongestCommonPrefix {
 
 
 }
+
+
+//Explanationf or time complexity of optimized solution:
+// The time complexity of the code is O(NlogN).
+
+// Simple Explanation
+// The code has two main parts:
+
+// Sorting the array: This is the most time-consuming step. The computer has to look at every single string and compare them to put them in the correct order. The method used, Arrays.sort(), is very efficient, but its time to complete still grows based on the number of strings, which we call N. For a sorting algorithm, this is typically N multiplied by the logarithm of N, or O(NlogN).
+
+// Finding the prefix: After sorting, the code only needs to look at the first and last strings. It then checks each character of these two strings one by one. The time this takes depends on the length of the strings, which we can call M. This is a much faster operation than the sorting step, so its time complexity is just O(M).
+
+// Since the sorting step O(NlogN) takes much longer than the prefix-finding step O(M) for a large number of strings, the overall time complexity is determined by the sorting. Therefore, the code's complexity is O(NlogN).
+
+
+//Sorting Algorithm Used
+// The Arrays.sort() method for an array of strings in Java uses a highly optimized version of Merge Sort or Timsort, depending on the Java version. Timsort is a hybrid sorting algorithm derived from Merge Sort and Insertion Sort, designed to perform well on many kinds of real-world data.
+
+
+
+
+
+
