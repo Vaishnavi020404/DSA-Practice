@@ -1,3 +1,28 @@
+// Date: Sunday, August 24, 2025
+// Problem: Find the Index of the First Occurrence in a String (LeetCode 28)
+// Link: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+//
+// Description:
+// Implement the function `strStr(haystack, needle)` using the brute force approach.
+// Given two strings, `haystack` and `needle`, return the index of the first occurrence of `needle` in `haystack`,
+// or -1 if `needle` is not part of `haystack`.
+//
+// Rules:
+// 1. If `needle` is empty, return 0.
+// 2. Compare all possible substrings of `haystack` with `needle`.
+// 3. Return the first index if match is found, else -1.
+// 4. We are using the brute force method (later optimized with KMP).
+//
+// Approach (Brute Force):
+// 1. Loop through each possible starting index in `haystack` where `needle` could fit.
+// 2. For each starting index, compare character by character with `needle`.
+// 3. If all characters match, return the starting index.
+// 4. If no match is found after scanning, return -1.
+//
+// Time Complexity: O(N * M) — where N = length of haystack, M = length of needle
+// Space Complexity: O(1) — only uses variables, no extra data structures
+
+
 
 import java.util.*;
 class PatternMatching {
