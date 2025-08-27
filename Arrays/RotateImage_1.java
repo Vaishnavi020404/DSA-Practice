@@ -33,7 +33,7 @@
 
 //I have beautified the code by adding extra etxra form my future revision
 import java.util.Scanner;
-public class RotateImage {
+public class RotateImage_1 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
