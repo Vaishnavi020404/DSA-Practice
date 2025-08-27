@@ -32,7 +32,7 @@
 
 
 //I have beautified the code by adding extra etxra form my future revision
-
+import java.util.Scanner;
 public class RotateImage {
 
     public static void main(String[] args) {
