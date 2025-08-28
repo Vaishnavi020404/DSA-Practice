@@ -6,7 +6,11 @@
 /*
 ---------------------------------------------------------------
  Program: Two Sum Problem (Brute Force vs HashMap Approaches)
- File   : RotateMatrix.java
+ * 28 August, 2025
+ * PLACEMENT ARRAY 4
+ * TwoSum.java
+ * LeetCode 1: Two Sum
+ * Problem link: https://leetcode.com/problems/two-sum/
 
  Description:
    This program solves the classic "Two Sum" problem:
@@ -33,18 +37,10 @@
       - Extended version of HashMap method to collect ALL valid pairs.
 
  Notes on Doubts:
-   - "Why n - j - 1?" → That’s from matrix rotation (not used here).
-   - "Why j = i in transpose?" → Also from rotation, here we don’t need it.
    - Brute force is not better than HashMap because O(n^2) grows very fast
      with large arrays, while HashMap stays O(n) on average.
 
- Input Format:
-   - First line : size of array (n)
-   - Second line: n integers (array elements)
-   - Third line : target sum
 
- Output:
-   - Indices of pairs (for all methods)
 
 ---------------------------------------------------------------
 */
