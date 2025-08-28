@@ -36,7 +36,7 @@ public class BestTimeToBuyAndSellStock_5 {
         return maxProfit;
     }
 
-    // Optimized Approach (Kadane-like, single pass)
+    // Optimized Approach
     public static int maxProfitOptimized(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
