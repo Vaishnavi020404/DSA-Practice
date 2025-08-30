@@ -67,6 +67,89 @@ Binary Search + Duplicates Handling
 
 ---
 
+NOTES given by My dear Chatgpt for a sundar code:
+1️⃣ Naming Conventions
+| Type           | Style                       | Example                                |
+| -------------- | --------------------------- | -------------------------------------- |
+| Class          | PascalCase                  | `ContainsDuplicates`, `LinkedListNode` |
+| Method         | camelCase                   | `containsDuplicatesUsingHashSet()`     |
+| Boolean Method | camelCase + is/has/contains | `hasDuplicate()`, `isSorted()`         |
+| Variable       | camelCase, meaningful       | `nums`, `count`, `set`, `index`        |
+| Constant       | ALL\_CAPS                   | `MAX_SIZE`, `DEFAULT_TIMEOUT`          |
+
+
+Rule: names should reflect purpose clearly.
+
+2️⃣ Code Formatting
+
+Indent 4 spaces per level.
+
+Leave blank lines between logical sections (input, processing, output).
+
+Keep line length ≤ 100 chars if possible.
+
+Group related code together.
+
+Example:
+
+Scanner sc = new Scanner(System.in); // Input section
+
+int n = sc.nextInt();
+int[] nums = new int[n];
+
+for (int i = 0; i < n; i++) {
+    nums[i] = sc.nextInt();
+}
+
+3️⃣ Commenting
+
+Header comments: Problem, link, date, approach, complexity.
+
+Section comments: Input / Processing / Output.
+
+Method comments: Purpose, approach, complexity.
+
+Inline comments: Only for non-obvious steps.
+
+Example:
+
+// Approach 1: Using HashSet to track seen numbers
+// Returns true if any duplicate exists
+static boolean containsDuplicatesUsingHashSet(int[] nums) {
+    HashSet<Integer> set = new HashSet<>();
+    for (int num : nums) {
+        if (set.contains(num)) return true; // Duplicate found
+        set.add(num);
+    }
+    return false; // No duplicates
+}
+
+4️⃣ Structure
+
+Header comment
+
+Imports
+
+Class declaration
+
+Main method
+
+Input section
+
+Processing section
+
+Output section
+
+Helper methods (approaches, utils)
+
+5️⃣ Optional Enhancements
+
+Close resources (like Scanner).
+
+Consistent naming (don’t switch num → val).
+
+Use descriptive boolean names: isDuplicateFound instead of res.
+
 
 
 
