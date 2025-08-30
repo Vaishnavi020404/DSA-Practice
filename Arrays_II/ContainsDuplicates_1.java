@@ -8,13 +8,15 @@
 //   2) Using HashMap to keep counts (works, but slightly more overhead).
 // Time Complexity: O(n) for both approaches
 // Space Complexity: O(n) for both approaches
+
+
 //===========================================================
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class ContainsDuplicates {
+public class ContainsDuplicates_1 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
