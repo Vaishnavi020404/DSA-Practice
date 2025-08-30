@@ -1,5 +1,5 @@
 //===========================================================
-// LeetCode 169 - Majority Element
+// LeetCode 169 - Majority Element(Resolved)
 // Date: 30/08/2025
 // Link: https://leetcode.com/problems/majority-element/
 // Tags: Hashing / Array
@@ -16,7 +16,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class MajorityElement {
+public class MajorityElement_4 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
