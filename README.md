@@ -67,7 +67,7 @@ Binary Search + Duplicates Handling
 
 ---
 
-NOTES given by My dear Chatgpt for a sundar code:
+NOTES given by My dear Chatgpt for a sundar code:(I have not implemented the techniques of this type of code through out ,but I started doing it consistently after the creation of Arrays folder.)
 1️⃣ Naming Conventions
 | Type           | Style                       | Example                                |
 | -------------- | --------------------------- | -------------------------------------- |

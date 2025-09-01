@@ -1,0 +1,83 @@
+## 📚 Regex & String Cleaning Notes (Java)
+
+**Topic:** Removing non-alphanumeric characters using regex in Java
+
+---
+
+### 1️⃣ `replaceAll()` Method
+
+* **Syntax:**
+
+  ```java
+  string.replaceAll(regex, replacement)
+  ```
+* **Purpose:** Replace all substrings matching the regex with the replacement string.
+* **Example:**
+
+  ```java
+  s.replaceAll("[^a-zA-Z0-9]", "")
+  ```
+
+  → Removes all non-alphanumeric characters from `s`.
+
+---
+
+### 2️⃣ Regex Breakdown: `[^a-zA-Z0-9]`
+
+| Part                  | Meaning                                                    |
+| --------------------- | ---------------------------------------------------------- |
+| `[]`                  | Character class, matches any one character inside brackets |
+| `a-z`                 | Any lowercase letter                                       |
+| `A-Z`                 | Any uppercase letter                                       |
+| `0-9`                 | Any digit                                                  |
+| `^` (inside brackets) | Negates the class → matches anything NOT listed            |
+
+✅ So `[^a-zA-Z0-9]` matches **any character that is not a letter or digit** (spaces, punctuation, symbols, etc.)
+
+---
+
+### 3️⃣ Replacement: `""` (Empty String)
+
+* Replaces matched characters with nothing → effectively **removing them**.
+* Ensures the string contains **only letters and digits** after this operation.
+
+---
+
+### 4️⃣ Example Walkthrough
+
+```java
+String s = "A man, a plan, a canal: Panama!";
+s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+System.out.println(s);
+```
+
+**Step by step:**
+
+1. Original: `"A man, a plan, a canal: Panama!"`
+2. After `replaceAll("[^a-zA-Z0-9]", "")`: `"AmanaplanacanalPanama"`
+3. After `.toLowerCase()`: `"amanaplanacanalpanama"`
+
+✅ Now ready for palindrome or anagram checks.
+
+---
+
+### 5️⃣ Key Takeaways
+
+1. **`StringBuilder` is for building/modifying strings**, **not for searching**.
+2. **Searching or checking duplicates** → use **HashSet** or **HashMap**.
+3. Regex + `replaceAll` is a **fast, clean way to preprocess strings** for algorithms like palindrome checking.
+4. After preprocessing, you can use **two pointers, frequency arrays, or sorting** as needed.
+
+---
+
+### 💡 Exam Tip
+
+* Remember: `[^...]` inside brackets **negates** the set.
+* Combining with `.toLowerCase()` gives a **uniform string** for comparison.
+* Works for **palindrome, anagram, and other character-only string checks**.
+
+---
+
+If you want, I can **also make a one-line visual “cheat sheet” diagram** showing **what characters get removed by `[^a-zA-Z0-9]`**, perfect for last-minute exam revision.
+
+Do you want me to make that diagram?
