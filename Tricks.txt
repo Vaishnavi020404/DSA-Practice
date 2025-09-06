@@ -1,0 +1,53 @@
+📌 Recursion & Backtracking Quick Notes
+1️⃣ Recursion Basics
+
+Definition: Function calls itself to solve smaller subproblems.
+
+Key Parts:
+
+Base case: Stop condition (must exist!)
+
+Recursive case: Calls itself with smaller input
+
+When to use:
+
+Problem can be broken into smaller identical subproblems
+
+Example patterns:
+
+Factorial, Fibonacci, Sum of N numbers, Power of a number
+
+Common LeetCode problems: LC50 (Pow), Factorial, Fibonacci
+
+Tip: Always trace recursion stack to avoid mistakes.
+
+2️⃣ Backtracking Basics
+
+Definition: Recursion + “undo step” to explore all possible solutions
+
+When to use:
+
+Generate all subsets/permutations/combinations
+
+Some choices can lead to invalid solutions → must backtrack
+
+Undo step: Remove last choice before moving to next option
+
+Example patterns:
+
+Pattern	Example
+Subsets	LC78 Subsets
+Permutations	LC46 Permutations
+Combinations	LC39 Combination Sum, LC40 Combination Sum II
+Grid/Board	N-Queens, Rat in Maze
+
+
+3️⃣ How to Identify Recursion/Backtracking in a Problem
+
+“All possible X” or “generate X” → likely backtracking
+
+Problem can be divided into smaller subproblems → recursion
+
+Choices + constraints → backtracking
+
+Ask: Do I need to undo some steps after recursion? → backtracking

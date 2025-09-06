@@ -76,8 +76,13 @@ System.out.println(s);
 * Combining with `.toLowerCase()` gives a **uniform string** for comparison.
 * Works for **palindrome, anagram, and other character-only string checks**.
 
----
+General Rule
 
-If you want, I can **also make a one-line visual “cheat sheet” diagram** showing **what characters get removed by `[^a-zA-Z0-9]`**, perfect for last-minute exam revision.
+Every time you divide by 2, the number of steps = how many times 2 fits into n.
+That’s exactly the definition of log base 2 of n (log₂(n)).
 
-Do you want me to make that diagram?
+✅ So:
+
+Time complexity counts steps → steps = log₂(n) → O(log n).
+
+Space complexity counts function calls waiting → also log₂(n) → O(log n).
