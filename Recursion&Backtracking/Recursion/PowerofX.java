@@ -124,3 +124,11 @@ public class PowerofX {
 // That’s it bro — just **3 rules**:
 // 👉 Cut in half → Square it → Multiply x if odd.
 
+// myPow(2, -3)  
+// → fastPow(0.5, 3)  
+//     → fastPow(0.5, 1)  
+//         → fastPow(0.5, 0) = 1  
+//         → returns 0.5  
+//     → returns 0.125
+
+
