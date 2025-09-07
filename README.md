@@ -1,8 +1,6 @@
 # 📚 DSA Practice Repository
 
 This repository contains my daily Data Structures & Algorithms practice solutions, focusing on Java and LeetCode problems.  
-I am following Kunal Kushwaha's "Java + DSA + Interview Preparation Course" on Youtube.
-
 ---
 
 ✅ **Goals:**
