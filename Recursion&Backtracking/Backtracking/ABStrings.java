@@ -1,7 +1,8 @@
+
+
 public class ABStrings {
     public static void main(String[] args){
-        generate(2,"");
-        
+        generate(2,"");      
 
     }
 
@@ -12,5 +13,6 @@ public class ABStrings {
         }
         generate(n,current+"A");
         generate(n,current+"B");
+        generate(n, current+"C");
     }
 }
