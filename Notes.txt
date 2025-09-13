@@ -1,3 +1,30 @@
+When and Where to use LinkedList and where to use ArrayList:
+| **Operation** | **ArrayList** (Time Complexity) | **LinkedList** (Time Complexity) | **Better Option** |
+| ------------- | ------------------------------- | -------------------------------- | ----------------- |
+| **Insert**    | O(n) (shifting needed)          | O(1) (just pointer change)       | **LinkedList**    |
+| **Search**    | O(1) (direct index access)      | O(n) (traverse nodes)            | **ArrayList**     |
+
+Properties of Linked List
+
+✅ Variable Size – Can grow or shrink dynamically (no fixed size like arrays).
+
+✅ Non-contiguous Memory – Nodes are stored in scattered memory locations, connected using pointers.
+
+✅ Fast Insertion – O(1) time (just change pointers, no shifting like arrays).
+
+✅ Slower Search – O(n) time (must traverse nodes one by one).
+
+
+
+head → Node1(data=A,next=Node2)
+         ↓
+       Node2(data=B,next=Node3)
+         ↓
+       Node3(data=C,next=null)
+
+
+
+
 ## 📚 Regex & String Cleaning Notes (Java)
 
 **Topic:** Removing non-alphanumeric characters using regex in Java
