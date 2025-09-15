@@ -23,6 +23,98 @@ head → Node1(data=A,next=Node2)
        Node3(data=C,next=null)
 
 
+--------------------------------------------------------------------------------
+📚 Collection Classes in Java
+
+Collection classes = pre-built data structures in Java
+
+They are part of Java Collections Framework (JCF)
+
+They help you store, organize, and manage data easily.
+
+You don’t have to write your own Node, next, etc.
+
+They come with built-in methods like .add(), .remove(), .size(), .clear().
+
+
+🛠 Examples of Collection Classes
+
+List (ordered, allows duplicates)
+
+ArrayList → like a resizable array
+
+LinkedList → like your custom linked list but with built-in methods
+
+Set (no duplicates allowed)
+
+HashSet → stores unique items, fast lookup
+
+TreeSet → stores unique items in sorted order
+
+Queue / Deque (FIFO, LIFO structures)
+
+PriorityQueue → queue with priority
+
+ArrayDeque → double-ended queue
+
+Map (key-value pairs)
+
+HashMap → store data as key → value
+
+TreeMap → sorted keys
+---------------------------------------------------------------------------------
+📝 Java Collections Framework (JCF) — Notes for Interview
+
+Definition: A set of ready-made classes & interfaces in Java to store and manage groups of objects.
+
+Advantage: Saves time (no need to build data structures manually), provides built-in methods like .add(), .remove(), .size().
+
+🌳 Main Interfaces
+
+List → ordered, allows duplicates
+
+Implementations: ArrayList, LinkedList, Vector
+
+Set → no duplicates
+
+Implementations: HashSet, LinkedHashSet, TreeSet
+
+Queue → follows FIFO (first in, first out)
+
+Implementations: PriorityQueue, ArrayDeque
+
+Map → key-value pairs (not part of Collection, but in JCF)
+
+Implementations: HashMap, TreeMap, LinkedHashMap
+
+⭐ Common Methods
+
+.add(element) → add data
+
+.remove(element) → remove data
+
+.size() → number of elements
+
+.contains(element) → check existence
+
+.clear() → empty the collection
+
+🔑 Key Points
+
+List: ordered, duplicates allowed
+
+Set: unique elements only
+
+Queue: processing order
+
+Map: key → value storage
+
+Part of java.util package
+
+⚡ One-liner for interviews:
+“Java Collections Framework is a set of classes & interfaces (List, Set, Queue, Map) that provide ready-made data structures with built-in methods to store, retrieve, and process groups of objects efficiently.”
+
+------------------------------------------------------------------------------
 
 
 ## 📚 Regex & String Cleaning Notes (Java)
