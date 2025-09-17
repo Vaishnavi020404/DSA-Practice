@@ -116,6 +116,26 @@ Part of java.util package
 
 ------------------------------------------------------------------------------
 
+     public static ListNode buildList(String[] parts){
+            ListNode head=null, tail=null;
+            for(String part:parts){
+                ListNode node=new ListNode(Integer.parseInt(part));
+                if(head==null) head=tail=node;
+                else{
+                    tail.next=node;
+                    tail=node;
+                }
+            }
+            return head;
+        }
+
+"1 2 3"
+→ ["1", "2", "3"]
+→ [1] → [2] → [3] → null
+
+--------------------------------------------------------------------------------
+
+
 
 ## 📚 Regex & String Cleaning Notes (Java)
 
