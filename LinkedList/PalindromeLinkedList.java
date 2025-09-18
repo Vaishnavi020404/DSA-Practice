@@ -69,4 +69,37 @@ public class PalindromeLinkedList {
     }
 }
 
-    
+// Problem with Reversing the Second Half:
+// When you reverse, you’re literally changing the direction of the links.
+// If you don’t handle the next pointer carefully, you can lose track of the remaining list.
+// This is dangerous because linked lists don’t allow random access—you can’t just “go back” like in arrays.
+// So, the main challenge is:
+// 👉 How do I reverse without breaking the chain?
+
+// Walkthrough
+// Imagine the second half: 4 -> 5 -> null
+// Initially: prev = null, slow = 4.
+// First iteration:
+// temp = 5 (save next)
+// slow.next = null (reverse pointer, now 4 -> null)
+// prev = 4
+// slow = 5
+
+// Second iteration:
+// temp = null (save next)
+// slow.next = 4 (reverse pointer, now 5 -> 4)
+// prev = 5
+// slow = null (end loop)
+
+// Now prev points to the head of reversed list: 5 -> 4 -> null. ✅
+
+// Why it Feels Tricky
+// Pointer juggling – you must save slow.next before reversing, otherwise the rest of the list is lost.
+// Order of updates – slow.next = prev must come after saving slow.next.
+// Mental model – unlike arrays, you can’t visualize indexes, so it feels abstract until you dry run.
+
+// 💡 Tip for Notes:Reversing the second half is tricky because:
+// If we directly change slow.next, we lose the remaining nodes.
+// That’s why we first store it in temp.
+// Then we carefully re-wire one link at a time until the entire second half is reversed.
+

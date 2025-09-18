@@ -21,8 +21,6 @@ public class ImplementUsingArrayList {
         public static int peek(){
             if(isEmpty()) return -1;
              return list.get(list.size() - 1);
-
-
         }
 
 
