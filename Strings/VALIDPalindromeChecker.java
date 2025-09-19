@@ -1,4 +1,4 @@
-// Date: Friday, August 8, 2025
+// Date: Friday, August 8, 2025 and September 19,2025
 // LeetCode Problem 125: Valid Palindrome
 // Problem Link: https://leetcode.com/problems/valid-palindrome/
 // Description: Checks if a string is a palindrome, considering only alphanumeric characters and ignoring case.

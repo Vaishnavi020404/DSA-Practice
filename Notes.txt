@@ -1,3 +1,9 @@
+Reminder(for my self):
+150 problem->undertsand hwo to take user input
+same for all the problems of linkedlist,stack,queues
+
+
+
 ## 📚 Regex & String Cleaning Notes (Java)
 
 **Topic:** Removing non-alphanumeric characters using regex in Java
