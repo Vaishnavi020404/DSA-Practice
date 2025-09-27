@@ -28,7 +28,7 @@ public class MergeSortedArray {
         int[] nums1 = new int[m + n];
         int[] nums2 = new int[n];
 
-        System.out.println("Enter nums1 elements (first " + m + " valid, rest 0):");
+        System.out.println("Enter nums1 elements (first " + m + " valid,and assume rest will be 0s):");
         for (int i = 0; i < m; i++) nums1[i] = sc.nextInt();
 
         System.out.println("Enter nums2 elements:");
