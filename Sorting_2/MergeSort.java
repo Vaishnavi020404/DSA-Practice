@@ -1,3 +1,4 @@
+// package sorting_2;
 // 1️⃣ What the ++ means
 
 // x++ → “use the current value of x, then increase it by 1”
@@ -9,6 +10,20 @@
 // merged[x] = arr[idx2];  // copy value from arr[idx2] to merged[x]
 // x = x + 1;               // move to next spot in merged
 // idx2 = idx2 + 1;         // move to next element in right half
+
+// divide(0,3)
+//  ├─ divide(0,1)
+//  │    ├─ divide(0,0)   // base case → returns
+//  │    └─ divide(1,1)   // base case → returns
+//  │    └─ conquer(0,0,1)
+//  │
+//  └─ divide(2,3)
+//       ├─ divide(2,2)   // base case → returns
+//       └─ divide(3,3)   // base case → returns
+//       └─ conquer(2,2,3)
+
+// └─ conquer(0,1,3)
+
 public class MergeSort {
     public static void main(String[] args) {
         // Input array to sort

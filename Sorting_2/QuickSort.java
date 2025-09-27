@@ -1,48 +1,84 @@
-package Sorting_2;
+
+
+// quickSort(0,4)
+//  ├─ partition(0,4) → pivot placed at index 2 (value = 4)
+//  │
+//  ├─ quickSort(0,1)   // left side of pivot
+//  │    ├─ partition(0,1) → pivot placed at index 1 (value = 3)
+//  │    │
+//  │    ├─ quickSort(0,0)   // base case → return
+//  │    └─ quickSort(2,1)   // invalid range → return
+//  │
+//  └─ quickSort(3,4)   // right side of pivot
+//       ├─ partition(3,4) → pivot placed at index 3 (value = 5)
+//       │
+//       ├─ quickSort(3,2)   // invalid range → return
+//       └─ quickSort(4,4)   // base case → return
+
 public class QuickSort {
     public static void main(String[] args) {
         int[] arr = {5, 3, 8, 4, 2};
+
+        // Call quickSort on the full array
         quickSort(arr, 0, arr.length - 1);
+
+        // Print sorted array
         for (int num : arr) {
             System.out.print(num + " ");
         }
     }
 
+    // Recursive QuickSort function
     public static void quickSort(int[] arr, int low, int high) {
+        // Base condition: only sort if there are at least 2 elements
         if (low < high) {
+            // Partition the array → pivot gets placed in correct sorted position
             int pi = partition(arr, low, high);
+
+            // Recursively sort the left part (before pivot)
             quickSort(arr, low, pi - 1);
+
+            // Recursively sort the right part (after pivot)
             quickSort(arr, pi + 1, high);
         }
-
     }
 
-    public static int partition(int[] arr,int low,int high){
-        int pivot = arr[low]; // pivot value
-        int i=low;
-        int j=high;
-        while(i<j){
-            
-while(arr[i] <= pivot && i < high) i++;
-while(arr[j] > pivot && j > low) j--;
+    // Partition using Hoare scheme
+    public static int partition(int[] arr, int low, int high) {
+        // Choose pivot (here → first element)
+        int pivot = arr[low];
 
-            
-if (i < j) {
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
+        // i moves from left, j moves from right
+        int i = low;
+        int j = high;
 
-            
+        // Keep walking until i and j meet/cross
+        while (i < j) {
+
+            // Move i forward until an element > pivot is found
+            while (arr[i] <= pivot && i < high) i++;
+
+            // Move j backward until an element ≤ pivot is found
+            while (arr[j] > pivot && j > low) j--;
+
+            // Swap only if i and j have not crossed
+            if (i < j) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
-        int temp=arr[low];
-        arr[low]=arr[j];
-        arr[j]=temp;
+
+        // Swap pivot into its correct place
+        int temp = arr[low];
+        arr[low] = arr[j];
+        arr[j] = temp;
+
+        // Return pivot index
         return j;
     }
-        
-
 }
+
 
 
 
