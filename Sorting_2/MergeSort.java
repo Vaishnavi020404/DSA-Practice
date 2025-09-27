@@ -1,54 +1,91 @@
+// 1️⃣ What the ++ means
 
+// x++ → “use the current value of x, then increase it by 1”
+
+// idx2++ → “use the current value of idx2, then increase it by 1”
+
+// Think of it as two steps in one line:
+
+// merged[x] = arr[idx2];  // copy value from arr[idx2] to merged[x]
+// x = x + 1;               // move to next spot in merged
+// idx2 = idx2 + 1;         // move to next element in right half
 public class MergeSort {
     public static void main(String[] args) {
+        // Input array to sort
         int[] arr = {5, 3, 8, 4, 2};
+        
+        // Call mergeSort on the full array (indices 0 to arr.length-1)
         mergeSort(arr, 0, arr.length - 1);
+
+        // Print the sorted array
         for (int num : arr) {
             System.out.print(num + " ");
         }
     }
+
+    // Main mergeSort function (entry point)
     public static void mergeSort(int[] arr, int si, int ei) {
+        // Start the divide and conquer process
         divide(arr, si, ei);
     }
+
+    // Function to divide the array into halves recursively
     public static void divide(int[] arr, int si, int ei) {
-        if(si>=ei){
+        // Base case: if start index >= end index, array has 1 or 0 elements → already sorted
+        if (si >= ei) {
             return;
         }
-        int mid=si+(ei-si)/2;
-        divide(arr, si, mid);
-        divide(arr, mid+1,ei);
-        conquer(arr, si, mid, ei);  
 
-        
+        // Find the middle index to split the array
+        int mid = si + (ei - si) / 2;
+
+        // Recursively divide the left half
+        divide(arr, si, mid);
+
+        // Recursively divide the right half
+        divide(arr, mid + 1, ei);
+
+        // Merge the two sorted halves
+        conquer(arr, si, mid, ei);
     }
 
-    public static void conquer(int[] arr,int si,int mid,int ei){
-        int merged[]=new int[ei-si+1];
-        int idx1=si;
-        int idx2=mid+1;
+    // Function to merge two sorted halves of the array
+    public static void conquer(int[] arr, int si, int mid, int ei) {
+        // Temporary array to store merged sorted elements
+        int merged[] = new int[ei - si + 1];
 
-        int x=0;
+        // Pointers for left half and right half
+        int idx1 = si;       // start of left half
+        int idx2 = mid + 1;  // start of right half
 
-        while(idx1<=mid && idx2<=ei){
-            if(arr[idx1]<=arr[idx2]){
-                merged[x++]=arr[idx1++];
+        int x = 0; // pointer for merged array
+
+        // Merge elements from left and right halves in sorted order
+        while (idx1 <= mid && idx2 <= ei) {
+            if (arr[idx1] <= arr[idx2]) {
+                merged[x++] = arr[idx1++]; // take element from left half
+            } else {
+                merged[x++] = arr[idx2++]; // take element from right half
             }
-            else{
-                merged[x++]=arr[idx2++];
-            }
-        }
-        while(idx1<=mid){
-            merged[x++]=arr[idx1++];
-        }
-        while(idx2<=ei){
-            merged[x++]=arr[idx2++];
-        }
-        for(int i=0,j=si;i<merged.length;i++,j++){
-            arr[j]=merged[i];
         }
 
+        // Copy any remaining elements from the left half
+        while (idx1 <= mid) {
+            merged[x++] = arr[idx1++];
+        }
+
+        // Copy any remaining elements from the right half
+        while (idx2 <= ei) {
+            merged[x++] = arr[idx2++];
+        }
+
+        // Copy the sorted merged array back into the original array
+        for (int i = 0, j = si; i < merged.length; i++, j++) {
+            arr[j] = merged[i];
+        }
     }    
 }
+
 
 // Perfect! Let’s do a **dry run of your MergeSort code** on your array `{5, 3, 8, 4, 2}` using **your exact `divide` and `conquer` functions**. I’ll show **all steps, including `si`, `mid`, `ei`, idx1, idx2, merged[]**, so you can see exactly what’s happening.
 
