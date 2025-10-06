@@ -2,7 +2,75 @@ Reminder(for my self):
 150 problem->undertsand hwo to take user input
 same for all the problems of linkedlist,stack,queues
 
+| Algorithm      | Best Case  | Worst Case | Average Case | Space Complexity | Stable |
+| -------------- | ---------- | ---------- | ------------ | ---------------- | ------ |
+| Bubble Sort    | O(n)       | O(n²)      | O(n²)        | O(1)             | Yes    |
+| Selection Sort | O(n²)      | O(n²)      | O(n²)        | O(1)             | No     |
+| Insertion Sort | O(n)       | O(n²)      | O(n²)        | O(1)             | Yes    |
+| Merge Sort     | O(n log n) | O(n log n) | O(n log n)   | O(n)             | Yes    |
+| Quick Sort     | O(n log n) | O(n²)      | O(n log n)   | O(log n)         | No     |
 
+🔹 Arrays
+
+Better: Simple, fast, contiguous memory, direct index access in O(1).
+
+Not better: Fixed size, insertion/deletion is costly (O(n)).
+
+🔹 Sorting
+
+Better: Brings order → faster searching (binary search), easier data analysis.
+
+Not better: Takes time (O(n log n)), not useful if you only need one quick lookup.
+
+🔹 Searching
+
+Linear Search: Works on unsorted data, simple to implement, but slow (O(n)).
+
+Binary Search: Super fast (O(log n)) but needs sorted data.
+
+🔹 Strings
+
+Better: Easy handling of text data, tons of built-in methods.
+
+Not better: Immutable in Java → every modification creates a new string (memory + time overhead).
+
+
+
+
+🔹 Recursion
+
+Why it’s better
+
+Code clarity & simplicity – Problems like tree traversal, graph DFS, backtracking (e.g., N-Queens, permutations), divide-and-conquer (merge sort, quicksort) are naturally recursive. Writing them recursively makes code short, readable, and maps directly to the problem logic.
+👉 Example: DFS in a tree is just “visit node → recurse on children” (much cleaner than managing your own stack).
+
+Breaks down complexity – Converts a big problem into smaller subproblems. This is especially useful in dynamic programming and mathematical problems (factorial, Fibonacci, GCD, etc.).
+
+Why it’s not better
+
+Memory overhead – Every recursive call is pushed onto the call stack. If recursion depth is too high, it risks StackOverflowError.
+👉 Example: Recursive Fibonacci (naïve) for large n is terrible.
+
+Performance issues – Sometimes iterative solutions are faster and more memory-efficient.
+👉 Example: Factorial with a simple loop avoids extra function call overhead.
+
+Harder to debug – Deep recursion can be confusing to trace in large projects.
+
+Interview-worthy one-liner:
+
+👉 “Recursion makes problems like trees and divide-and-conquer elegant and clean, but it’s memory-hungry and can be slower than iterative approaches for large inputs.”
+
+🔹 HashMap
+
+Better: Stores key–value pairs with O(1) average lookup, insert, delete, great for quick data access.
+
+Not better: No ordering, uses more memory than arrays/lists.
+
+🔹 HashSet
+
+Better: Stores unique elements only with O(1) operations, perfect for duplicate removal and membership checks.
+
+Not better: No ordering, can’t store duplicates, not useful when you need indexed access.
 
 ## 📚 Regex & String Cleaning Notes (Java)
 

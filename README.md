@@ -37,6 +37,7 @@ Each problem file includes:
 This repo is mainly for my personal practice.
 Feedback and suggestions are welcome!
 
+The folders endign with I are the folders created durign the first time learning of the topics and the ones with ending with II are for revisions but more important to me:))
 ---
 
 Abbreviations used to avoid writing long names for files:
@@ -65,7 +66,7 @@ Binary Search + Duplicates Handling
 
 ---
 
-NOTES given by My dear Chatgpt for a sundar code:(I have not implemented the techniques of this type of code through out ,but I started doing it consistently after the creation of Arrays folder.)
+NOTES given by My dear Chatgpt for a beautiful code:(I have not implemented the techniques of this type of code through out the repository ,but I started doing it consistently after the creation of ArraysII folder.)
 1️⃣ Naming Conventions
 | Type           | Style                       | Example                                |
 | -------------- | --------------------------- | -------------------------------------- |
