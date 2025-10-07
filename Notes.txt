@@ -10,6 +10,21 @@ same for all the problems of linkedlist,stack,queues
 | Merge Sort     | O(n log n) | O(n log n) | O(n log n)   | O(n)             | Yes    |
 | Quick Sort     | O(n log n) | O(n²)      | O(n log n)   | O(log n)         | No     |
 
+⚡ One-Line Triggers (for quick memory)
+
+Bubble → Neighbors swap, biggest goes right each pass.
+
+Insertion → Like arranging cards, put current element in right place.
+
+Selection → Pick smallest, put in front each time.
+===========================================================
+
+Bubble Sort recursive = just replace outer loop with recursion.
+
+Insertion Sort recursive = sort first n-1 elements, then insert last element.
+
+Selection Sort recursive = find min, swap, recurse on rest.
+=================================================
 🔹 Arrays
 
 Better: Simple, fast, contiguous memory, direct index access in O(1).

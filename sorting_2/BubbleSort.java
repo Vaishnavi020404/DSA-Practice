@@ -1,3 +1,9 @@
+// for i from 1 to N
+//     for j from 0 to N - 1
+//         if a[j] > a[j + 1]
+//             swap ( a[j], a[j + 1] )
+
+
 import java.util.*;
 public class BubbleSort {
     public static void main(String[] args) {
