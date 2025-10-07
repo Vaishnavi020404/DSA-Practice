@@ -37,7 +37,7 @@ Each problem file includes:
 This repo is mainly for my personal practice.
 Feedback and suggestions are welcome!
 
-The folders endign with I are the folders created durign the first time learning of the topics and the ones with ending with II are for revisions but more important to me:))
+The folders ending with I are the folders created durign the first time learning of the topics and the ones with ending with II are for revisions but more important to me:))
 ---
 
 Abbreviations used to avoid writing long names for files:
