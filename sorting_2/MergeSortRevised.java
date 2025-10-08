@@ -80,10 +80,10 @@ public class MergeSortRevised {
         System.out.println("Sorted array elements: " + Arrays.toString(arr));
     }
     static int[] mergeSort(int[] arr){
-        if(arr.length==1) return arr;
+        if(arr.length<=1) return arr;
         int mid = arr.length/2;
         int[] left=Arrays.copyOfRange(arr, 0, mid);
-        int[] right=Arrays.copyOfRange(arr, mid+1, arr.length);
+        int[] right=Arrays.copyOfRange(arr, mid, arr.length);
         left=mergeSort(left);
         right=mergeSort(right);
         return merge(left,right);

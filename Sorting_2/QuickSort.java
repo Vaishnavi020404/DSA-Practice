@@ -1,5 +1,3 @@
-
-
 // quickSort(0,4)
 //  ├─ partition(0,4) → pivot placed at index 2 (value = 4)
 //  │
@@ -67,6 +65,10 @@ public class QuickSort {
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
+
+//             Suppose i and j have already crossed each other (i ≥ j).
+// The outer loop while (i < j) is about to stop, but at this moment, you might still hit the swap code.
+// If you swap after crossing, you’ll end up messing up correctly placed elements (basically undoing good work).
         }
 
         // Swap pivot into its correct place
