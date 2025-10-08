@@ -81,3 +81,49 @@ public class MergeSortedArrayResolved {
         sc.close();
     }
 }
+
+// 1️⃣ Your original code (mergeWithSort)
+// for (int j = 0; j < n; j++) {
+//     nums1[m + j] = nums2[j];
+// }
+// Arrays.sort(nums1);
+
+
+// ✅ Correct: It always produces the correct merged array.
+
+// ✅ Simple & easy to understand: Interviewers can follow your logic.
+
+// ❌ Time complexity: O((m+n) log(m+n)) — slower than linear O(m+n).
+
+// ❌ Not optimal: Interviewers at big tech companies expect you to know the linear solution when the arrays are sorted.
+
+// 2️⃣ Interview perspective
+
+// If the interviewer asks “merge two sorted arrays”:
+
+// Using Arrays.sort is not ideal, because the point of the problem is to leverage the fact that arrays are sorted.
+
+// They want you to do the two-pointer merge (O(m+n)).
+
+// If you submit Arrays.sort, you might get “correct, but can you optimize?” — that’s very common.
+
+// If the interviewer asks “merge two arrays in general, no sorted assumption”:
+
+// Your approach is fine — they will accept it because you’re being practical.
+
+// 3️⃣ Key takeaway
+
+// Your code is good for understanding, testing, and small problems.
+
+// For interviews on “Merge Sorted Array,” you must know the two-pointer optimal method.
+
+// Tip: You can even start with your approach verbally:
+
+// “We could copy nums2 into nums1 and sort everything, but that’s O((m+n) log(m+n)).
+// Since the arrays are sorted, we can do it in linear time using two pointers from the end.”
+
+// This shows you understand the naive and optimal approaches, which impresses interviewers.
+
+// 💡 Rule of thumb:
+
+// Always mention the naive solution first, then explain how to optimize. That way, even if you forget the optimal, you get partial credit.
