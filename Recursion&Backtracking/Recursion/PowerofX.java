@@ -147,3 +147,26 @@ public class PowerofX {
 //
 //Efficient, elegant, and fast as hell.
 
+// HOW the recursion gets stuck (super simple)
+//
+//Let’s say:
+//n = -2147483648   // Integer.MIN_VALUE
+//You do:return 1 / myPow(x, -n);
+//Now Java tries to calculate:
+//        -n = 2147483648
+//BUT an int cannot store 2147483648 — it’s 1 more than what an int can handle.
+//So Java wraps it around like a glitchy calculator and it becomes:
+//        -2147483648   // again the same number!
+//
+//
+//So instead of going toward 0, you get this infinite loop:
+//
+//myPow(x, -2147483648)
+//myPow(x, -2147483648)
+//myPow(x, -2147483648)
+//It never gets closer to 0.
+//It never hits the base case.
+//It never stops.
+//→ StackOverflow.
+//
+//        That’s the whole story.
