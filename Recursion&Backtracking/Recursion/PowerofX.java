@@ -131,4 +131,19 @@ public class PowerofX {
 //         → returns 0.5  
 //     → returns 0.125
 
+// In very easy language
+//
+//Because doing n → n/2 every step cuts the work massively.
+//You finish in log(n) time instead of n time.
+//That’s why it’s called "fast power".
+//
+//Your code is literally doing:
+//
+//half the work
+//
+//then squaring the result
+//
+//and if needed, multiplying one extra x
+//
+//Efficient, elegant, and fast as hell.
 
