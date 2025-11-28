@@ -1,6 +1,6 @@
 //===========================================================
 // LeetCode 50 - Pow(x, n)
-// Date: 06/09/2025
+// Date: 06/09/2025,resolved on 29/11/25
 // Link: https://leetcode.com/problems/powx-n/
 // Tags: Recursion / Divide and Conquer / Math
 // Approach: 
