@@ -1,6 +1,6 @@
 
 // LeetCode 206 - Reverse Linked List
-// Date: 14/09/2025
+// Date: 14/09/2025,resolved on 1/12/25
 // Link: https://leetcode.com/problems/reverse-linked-list/
 // Tags: Linked List / Two-Pointer / Iteration
 // Approach: 
