@@ -175,3 +175,38 @@ That’s exactly the definition of log base 2 of n (log₂(n)).
 Time complexity counts steps → steps = log₂(n) → O(log n).
 
 Space complexity counts function calls waiting → also log₂(n) → O(log n).
+---------------------------------------------------
+
+
+When you do:
+return head; in a linked list
+
+You aren’t “returning one node”.
+You’re returning a reference to the first node, which gives access to the entire chain that follows.
+head → 10 → 20 → 30 → 40 → null
+
+
+A linked list is not an array.
+A linked list is literally this:
+
+head → [val | next] → [val | next] → [val | next] → null
+
+
+You don’t store the entire list anywhere.
+You only store the address of the first node.
+That’s your head.
+
+And THAT first node contains a pointer to the second.
+The second contains a pointer to the third.
+And so on.
+
+So returning head is like saying:
+
+“Here’s the address of the first domino — push it and the entire chain falls.”
+
+When you return head, you're actually returning the starting point of the whole chain.
+
+That’s all you need.
+That’s all Java needs.
+That’s all the universe needs.
+--------------------------------------------------
