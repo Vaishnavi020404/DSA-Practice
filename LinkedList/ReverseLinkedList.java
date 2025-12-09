@@ -34,6 +34,23 @@ public class ReverseLinkedList {
     // Iterative reversal
     public static ListNode reverseIterative(ListNode head) {
         ListNode prev = null, curr = head;
+
+
+//Iterative
+// ListNode prev = null, curr = head;
+// while (curr != null) { ... }
+
+
+// Only head == null matters for safety.
+
+// Why not head.next == null?
+
+// The while loop handles all cases, including a single-node list.
+
+// If the list has one node, curr != null → enters loop once → curr.next = prev (null) → prev = curr → curr = next (null) → loop ends. Works perfectly without a special check.
+
+
+
         while (curr != null) {
             ListNode next = curr.next;
             curr.next = prev;
@@ -48,8 +65,16 @@ public class ReverseLinkedList {
         if (head == null || head.next == null) {
             return head;
         }
+
+// head == null → the list is empty. There’s nothing to reverse, so return null.
+// head.next == null → the list has only one node. A single node reversed is still itself, so return it.
+// Why both?
+// The recursion works by reversing the “rest of the list” (head.next).
+// If you don’t check head.next == null, the recursion would keep calling itself on the last node’s next (which is null), and that would still work but adds an unnecessary extra call.
+// Including both makes the base case safe and clean, stopping recursion exactly when it should.
+
         ListNode newHead = reverseRecursive(head.next);
-        head.next.next = head;
+        head.next.next = head; //(head.next).next = head
         head.next = null;
         return newHead;
     }
@@ -63,6 +88,12 @@ public class ReverseLinkedList {
         System.out.println();
     }
 
+
+
+
+// Recursive: needs both checks to stop recursion properly.
+
+// Iterative: loop logic naturally handles single-node lists, so only head == null is “special.”
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter numbers separated by space:");
