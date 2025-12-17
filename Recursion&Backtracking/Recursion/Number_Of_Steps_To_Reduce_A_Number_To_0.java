@@ -1,4 +1,4 @@
-// Date:November 25,2025
+// Date:November 25,2025, solved again on December 17,2026
 // Problem: Number of Steps to Reduce a Number to Zero (LeetCode 1342)
 // Description:
 // Given an integer num, return the number of steps to reduce it to zero.
@@ -88,5 +88,29 @@ public class Number_Of_Steps_To_Reduce_A_Number_To_0 {
 
         return steps;
     }
+
+    //Best solution using recursion
+    
+    
+    public int numberOfStepsRecursion(int num) {
+        int steps=0;
+        return helper(num,steps);
+
+    }
+        public  int helper(int num,int steps){
+            if(num==0) return steps; //base condition
+            if(num%2==0){
+                num=num/2;
+                steps++;
+            }else{
+                num=num-1;
+                steps++;
+            }
+            return helper(num,steps);
+
+        }      
+    
+        
+    
 }
 
