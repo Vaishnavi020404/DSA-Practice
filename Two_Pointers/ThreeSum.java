@@ -131,3 +131,42 @@ public class ThreeSum{
 // -2 → correct, safe, textbook
 
 // -1 → sometimes works because your inner while(left < right) protects you, but not recommended.
+
+
+// ================================
+// List<Integer>
+
+// A List<Integer> is a list (or array-like collection) of integers.
+
+// Example:
+
+// List<Integer> triplet = Arrays.asList(1, 2, 3);
+
+
+// Here, triplet contains three numbers: 1, 2, 3.
+
+// List<List<Integer>>
+
+// A List<List<Integer>> is a list of lists of integers.
+
+// Example:
+
+// List<List<Integer>> allTriplets = new ArrayList<>();
+// allTriplets.add(Arrays.asList(-1,0,1));
+// allTriplets.add(Arrays.asList(-1,-1,2));
+
+
+// Each inner list is one triplet, outer list stores all triplets.
+
+// Set<List<Integer>>
+
+// A Set<List<Integer>> is like List<List<Integer>>, but it automatically removes duplicates.
+
+// Example:
+
+// Set<List<Integer>> set = new HashSet<>();
+// set.add(Arrays.asList(-1,0,1));
+// set.add(Arrays.asList(-1,0,1)); // ignored automatically
+
+
+// Only one [-1,0,1] is kept.
