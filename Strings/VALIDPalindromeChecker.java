@@ -1,4 +1,4 @@
-// Date: Friday, August 8, 2025 and September 19,2025
+// Date: Friday, August 8, 2025 and 19-9-25,solved again on 20-12-2025
 // LeetCode Problem 125: Valid Palindrome
 // Problem Link: https://leetcode.com/problems/valid-palindrome/
 // Description: Checks if a string is a palindrome, considering only alphanumeric characters and ignoring case.
@@ -91,5 +91,43 @@ System.out.println("Result (optimized approach): " + isPalindrome2(input));
         return true;
     }
 
+    //latest and my fav one altho it does not give space complextiy O(1)
+    // public boolean isPalindrome(String s) {
+    //     s = s.trim().toLowerCase();
+    //     s= s.replaceAll("[^a-zA-Z0-9]", "");
+
+    //     int i=0;
+    //     int j=s.length()-1;
+    //     if(s.length()==1) return true;
+    //     while(i<j){
+    //         if(s.charAt(i)==s.charAt(j)){
+    //             i++;
+    //             j--;
+    //         }else{
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
    
-}
+//     1️⃣ Strings in Java are immutable
+// Once a String is created, it cannot be changed.
+// Any “modification” like replacing, trimming, or concatenating always produces a new string object.
+// Example:
+// String s = "Hello!";
+// // s = s.replaceAll("[^a-zA-Z0-9]", "");
+// Step by step:
+// replaceAll scans "Hello!" and sees that ! is non-alphanumeric.
+// It creates a new string "Hello" (does not modify the original "Hello!").
+// The variable s now points to the new string "Hello".
+// The old "Hello!" may eventually be garbage-collected.
+// here were technically two strings in memory at that moment:
+
+// "Hello!" (old, original)
+
+// "Hello" (new, cleaned)
+
+// They just both happen to use the same variable name s.
+
+// The variable s now points to the new one.
+// }
