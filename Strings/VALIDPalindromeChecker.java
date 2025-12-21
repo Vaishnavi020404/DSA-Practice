@@ -90,7 +90,7 @@ System.out.println("Result (optimized approach): " + isPalindrome2(input));
         // If the loop completes without finding a mismatch, the string is a palindrome.
         return true;
     }
-
+}
     //latest and my fav one altho it does not give space complextiy O(1)
     // public boolean isPalindrome(String s) {
     //     s = s.trim().toLowerCase();

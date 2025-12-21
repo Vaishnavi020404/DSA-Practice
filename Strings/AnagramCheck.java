@@ -1,5 +1,5 @@
 // Date: 21/8/25
-// Problem: Valid Anagram (LeetCode 242)
+// Problem: Valid Anagram (LeetCode 242),solved again on 21/12/25
 // Link: https://leetcode.com/problems/valid-anagram/
 //
 // Description:
@@ -107,3 +107,56 @@ public class AnagramCheck {
 
    
 }
+// map.merge(c, 1, Integer::sum)
+
+// If key c doesn't exist → insert it with value 1
+// If key c exists → add 1 to its current value
+// Basically: map.put(c, map.getOrDefault(c, 0) + 1) but cleaner
+
+// map.computeIfPresent(c, (key, val) -> val > 1 ? val - 1 : null)
+
+// Only runs if key c exists
+// If value > 1 → decrement it by 1
+// If value = 1 → return null (which removes the key)
+// Basically: decrements the count or removes the key if count reaches 0
+
+
+// ## **How does returning `null` remove the key?**
+
+// From the Java docs for `computeIfPresent`:
+// > "If the function returns null, the mapping is removed"
+
+// It's built into the method's behavior. When your remapping function returns `null`, `computeIfPresent` automatically calls `map.remove(key)` for you.
+
+// ```java
+// // These are equivalent:
+// map.computeIfPresent(c, (key, val) -> val > 1 ? val - 1 : null);
+
+// // Same as:
+// if (map.containsKey(c)) {
+//     int val = map.get(c);
+//     if (val > 1) {
+//         map.put(c, val - 1);
+//     } else {
+//         map.remove(c);  // <-- null triggers this
+//     }
+// }
+// ```
+
+// ## **What is `Integer::sum`?**
+
+// It's a **method reference** to `Integer.sum(a, b)`, which just adds two integers.
+
+// ```java
+// // These are equivalent:
+// map.merge(c, 1, Integer::sum);
+// map.merge(c, 1, (oldVal, newVal) -> oldVal + newVal);
+// map.merge(c, 1, (oldVal, newVal) -> Integer.sum(oldVal, newVal));
+// ```
+
+// `merge` takes 3 parameters:
+// 1. Key (`c`)
+// 2. Default value if key doesn't exist (`1`)
+// 3. Function to combine old value + new value (`Integer::sum`)
+
+// So `Integer::sum` is just shorthand for adding the values together!
