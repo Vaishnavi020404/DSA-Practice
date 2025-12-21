@@ -83,6 +83,33 @@ public class AnagramCheck {
         return true;
     }
 
+//     int[] count = new int[26];  // All zeros
+// count = [0, 0, 0, 0, 0, ...] // 26 zeros
+//          a  b  c  d  e  ...
+//        index 0, 1, 2, 3, 4...
+// ```
+
+// ---
+
+// ### **Step 2: Process string `s = "cat"`**
+
+// **Character 'c':**
+// - `'c' - 'a'` = What position is 'c' in the alphabet? → 2 (because a=0, b=1, c=2)
+// - `count[2]++` → increase the count at position 2
+// - `count = [0, 0, 1, 0, ...]`
+
+// **Character 'a':**
+// - `'a' - 'a'` = 0
+// - `count[0]++`
+// - `count = [1, 0, 1, 0, ...]`
+
+// **Character 't':**
+// - `'t' - 'a'` = 19 (because t is the 19th letter after a)
+// - `count[19]++`
+// - `count = [1, 0, 1, 0, 0, ..., 1, ...]`
+// ```
+//           a  b  c             t
+
     // 3. HashMap method
     public static boolean isAnagramHashMap(String s, String t) {
         if (s.length() != t.length()) return false;
