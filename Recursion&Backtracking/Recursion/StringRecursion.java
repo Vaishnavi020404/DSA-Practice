@@ -1,5 +1,5 @@
 //This code demonstrates two recursive methods to skip characters in a string, with main method example. Includes both processed/unprocessed and single input approaches.
-//
+//Introduced the skip3 method to recursively remove all occurrences of a given substring from the input string. Updated the main method to demonstrate skip3 with an example.
 public class StringRecursion {
     public static void main(String[] args){
 //        System.out.println(skip2("baccad"));
