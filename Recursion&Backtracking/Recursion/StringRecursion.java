@@ -1,6 +1,9 @@
+//This code demonstrates two recursive methods to skip characters in a string, with main method example. Includes both processed/unprocessed and single input approaches.
+//
 public class StringRecursion {
     public static void main(String[] args){
-        System.out.println(skip2("baccad"));
+//        System.out.println(skip2("baccad"));
+        System.out.println(skip3("badapplemash","apple"));
 
     }
     //method 1:with 2 inputs(a processed and an unprocessed string)
@@ -31,5 +34,16 @@ public class StringRecursion {
         }
     }
 
+    static String skip3(String up,String removee){
+        if(up.isEmpty()){
+            return "";
+        }
+        char ch=up.charAt(0);
+        if(up.startsWith(removee)){
+            return ""+skip3(up.substring(removee.length()),removee);
+        }else{
+            return ch+skip3(up.substring(1),removee);
+        }
+    }
 
 }
