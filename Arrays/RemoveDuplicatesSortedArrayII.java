@@ -7,7 +7,7 @@
 //   Given a sorted array, remove duplicates in-place such that
 //   each element appears at most twice.
 //   Return the length k.
-//
+//K-2->If this number is the same as the one that appeared two positions ago, then adding it would make three copies → reject.”
 // Approaches Included:
 //   1) Optimized Two-Pointer Approach (Industry Standard)
 //
@@ -16,9 +16,7 @@
 
 import java.util.*;
 
-public class RemoveDuplicatesSortedArrayII {
-
-    
+public class RemoveDuplicatesSortedArrayII {    
     // =====================================================
     // OPTIMIZED APPROACH (CLEAN TWO POINTERS)
     // =====================================================
@@ -77,3 +75,20 @@ public class RemoveDuplicatesSortedArrayII {
         sc.close();
     }
 }
+
+// Think of it like this:
+
+// i = your hand picking vegetables/stones
+// You just look at each one in the pile; you don’t rearrange the pile yet.
+
+// k = the first empty spot in your organized row
+// You only place something here if it’s allowed (i.e., won’t make too many duplicates).
+
+// nums[k-2] = the guard
+// If the vegetable/stone you picked is the same as the one two spots back, putting it at k would make a third copy → skip it.
+
+// You never touch what you pick (i); it’s just the candidate. You only write to k when safe, building a perfectly organized start of the line.
+
+// So yes, you’re not checking the whole line or fixing past mistakes. You’re just selecting and safely placing the allowed ones at the front. Everything beyond k-1 doesn’t matter until it’s your turn to fill it.
+
+// That’s why the “not equal to k-2” is enough to enforce the “at most twice” rule without touching existing duplicates.
