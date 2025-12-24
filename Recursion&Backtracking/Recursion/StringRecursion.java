@@ -3,7 +3,9 @@
 public class StringRecursion {
     public static void main(String[] args){
 //        System.out.println(skip2("baccad"));
-        System.out.println(skip3("badapplemash","apple"));
+        String result=skip3("I am a overthinking diva overthinking.","overthinking");
+        result=result.replaceAll("\\s+\\.",".").replaceAll("\\s+"," ").trim();
+        System.out.println(result);
 
     }
     //method 1:with 2 inputs(a processed and an unprocessed string)
@@ -44,6 +46,7 @@ public class StringRecursion {
         }else{
             return ch+skip3(up.substring(1),removee);
         }
+
     }
 
 }
