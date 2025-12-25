@@ -1,4 +1,4 @@
-// Date: Sunday, August 24, 2025
+// Date: Sunday, August 24, 2025, solved again on 25/12/25
 // Problem: Find the Index of the First Occurrence in a String (LeetCode 28)
 // Link: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 //
@@ -25,7 +25,7 @@
 
 
 import java.util.*;
-class PatternMatching {
+class FirstOccurrenceInString {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -46,18 +46,21 @@ class PatternMatching {
 
    //Brute-Force method
     static int strStr(String haystack, String needle) {
-        if (needle.length() == 0) return 0;
+            if (needle.length() == 0) return 0;
 
-        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
-            int j = 0;
-            while (j < needle.length() && haystack.charAt(i + j) == needle.charAt(j)) {
-                j++;
-            }
-            if (j == needle.length()) {
-                return i;
-            }
+    int i = 0, j = 0;
+
+    while (i < haystack.length()) {
+        if (haystack.charAt(i) == needle.charAt(j)) {
+            i++;
+            j++;
+            if (j == needle.length()) return i - j;
+        } else {
+            i = i - j + 1; // go to next start
+            j = 0;         // restart needle
         }
-        return -1;
+    }
+    return -1;
     }
 
     //USING KMP OR RABIN-KARP ALGORITHM
