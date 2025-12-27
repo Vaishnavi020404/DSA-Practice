@@ -1,9 +1,10 @@
 //===========================================================
-// LeetCode XXX - Rotate Array
+// LeetCode 189 - Rotate Array
 // Date: 25/12/2025
 // Link: https://leetcode.com/problems/rotate-array/
 // Tags: Array / In-place / Two Pointers
-// Approach: 
+// Approach:
+
 //   1) Brute-force using extra array (O(n) time, O(n) space)
 //   2) Optimal in-place using reverse method (O(n) time, O(1) space)
 // Time Complexity: O(n) for both approaches
