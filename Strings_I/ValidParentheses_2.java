@@ -1,6 +1,6 @@
 //===========================================================
 // LeetCode 20 - Valid Parentheses
-// Date: 01/09/2025
+// Date: 01/09/2025,resolved on 03/02/2026
 // Link: https://leetcode.com/problems/valid-parentheses/
 // Tags: Stack / String / Brackets Matching
 // Approach Summary & Notes for Revision:
