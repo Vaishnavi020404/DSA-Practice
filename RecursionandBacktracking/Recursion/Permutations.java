@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+
 public class Permutations {
     public static void main(String[] args) {
-        permutations("", "abc");
+        // permutations("", "diva");
+        // System.out.println(permutationsList("","diva"));
+        System.out.println(permutationsCount("","abc"));
 
     }
     static void permutations(String p,String up){
@@ -8,7 +12,7 @@ public class Permutations {
             System.out.println(p);
             return;
         }
-// Why <= and not <? inthe for loop condition
+        // Why <= and not <? inthe for loop condition
 // Because you can insert a character at EVERY position including the END.
         for (int i=0;i<=p.length();i++){
             char ch=up.charAt(0);
@@ -17,6 +21,40 @@ public class Permutations {
             permutations(left+ch+right,up.substring(1));
         }
     }
+
+       static int permutationsCount(String p,String up){
+        if(up.isEmpty()){
+            return 1;
+        }
+        int count=0;
+
+        for (int i=0;i<=p.length();i++){
+            char ch=up.charAt(0);
+            String left=p.substring(0,i);
+            String right=p.substring(i,p.length());
+            count=count+permutationsCount(left+ch+right,up.substring(1));
+        }
+        return count;
+    }
+        static ArrayList<String> permutationsList(String p,String up){
+        if(up.isEmpty()){
+            ArrayList<String> list =new ArrayList<>();
+            list.add(p);
+            return list;
+        }       
+
+        ArrayList<String> finalans =new ArrayList<>();
+
+        for (int i=0;i<=p.length();i++){
+            char ch=up.charAt(0);
+            String left=p.substring(0,i);
+            String right=p.substring(i,p.length());
+            finalans.addAll(permutationsList(left+ch+right,up.substring(1)));
+        }
+
+        return finalans;
+    }
+    
 }
 
 // You split p, so loop based on p.length().hence p.length in the for loop condition
@@ -78,3 +116,29 @@ public class Permutations {
 //                     └─── i=2: left="ab", right=""
 //                          Result: "ab" + 'c' + "" = "abc"
 //                          └─── permutations("abc", "") → PRINT "abc" ✓
+
+
+
+
+// How It Works:
+// Instead of printing each permutation when you find it, you collect them all in a list and return them.
+
+// Base Case:
+// When no more characters left to process:
+
+// Create a new list
+// Put the completed permutation in it
+// Return that list (with one item)
+
+
+// Recursive Case:
+// Create an empty list to collect ALL results.
+// Then loop through all positions:
+
+// Make recursive call for each position
+// That call returns a LIST of permutations
+// Add ALL those permutations to your collection list
+// Continue for all positions
+
+// After the loop, your list has ALL permutations from ALL branches.
+// Return that complete list.
