@@ -1,0 +1,73 @@
+1. What a Stack really is in Java
+
+In Java, Stack is not a primitive data structure — it’s actually a class that extends another class called Vector.
+Vector is like a dynamic array (you can access elements using get(index)).
+Since Stack inherits from Vector, it gets all of Vector’s features — including the ability to use loops and indexing.
+
+That’s why you can do things like:
+
+Stack<Integer> s = new Stack<>();
+s.push(10);
+s.push(20);
+s.push(30);
+
+for (int num : s) {   // works because Vector implements Iterable
+    System.out.println(num);
+}
+
+
+Output:
+
+10
+20
+30
+
+
+So, even though we think of stack as a “push/pop only” structure, Java’s Stack lets you look inside like an array because of this inheritance.
+
+
+
+
+
+----------------------------------------------------------------------------
+1️⃣ Use == for primitive types
+
+Primitives are int, double, char, boolean, etc.
+
+They store the actual value.
+
+== checks if the values are the same.
+
+Example:
+
+int a = 5;
+int b = 5;
+System.out.println(a == b); // true, values are the same
+
+
+✅ Correct: use == for primitive comparisons.
+
+2️⃣ Use .equals() for objects
+
+Objects are Integer, String, Double, ArrayList, CustomClass, etc.
+
+They store references to memory locations, not the actual value.
+
+== checks if the references point to the same object (memory address).
+
+.equals() checks if the content/value inside the objects is the same.
+
+Example:
+
+Integer a = 1000;
+Integer b = 1000;
+System.out.println(a == b);      // false → different objects
+System.out.println(a.equals(b)); // true  → same value inside
+
+String s1 = new String("hello");
+String s2 = new String("hello");
+System.out.println(s1 == s2);      // false → different objects
+System.out.println(s1.equals(s2)); // true  → same content
+
+
+✅ Correct: use .equals() for objects when comparing values.

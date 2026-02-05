@@ -1,0 +1,86 @@
+
+---
+
+## **1. Merge Sort**
+
+* **Type:** Divide and Conquer, Stable, Comparison-based.
+* **How it works:**
+
+  1. Divide the array into two halves.
+  2. Recursively sort both halves.
+  3. Merge the two sorted halves into a single sorted array.
+* **Time Complexity:**
+
+  * Best: O(n log n)
+  * Average: O(n log n)
+  * Worst: O(n log n)
+* **Space Complexity:** O(n) (extra array for merging)
+* **Key Points for Interviews:**
+
+  * Stable sort → keeps original order of equal elements.
+  * Good for linked lists (no extra space needed for linked list merge).
+  * Recursive approach; iterative (bottom-up) is possible.
+
+---
+
+## **2. Quick Sort**
+
+* **Type:** Divide and Conquer, Unstable, Comparison-based.
+* **How it works:**
+
+  1. Pick a pivot element (common: last element, random, or median).
+  2. Partition the array so that elements < pivot go left, elements > pivot go right.
+  3. Recursively sort the left and right partitions.
+* **Time Complexity:**
+
+  * Best: O(n log n)
+  * Average: O(n log n)
+  * Worst: O(n²) (happens if pivot is smallest/largest each time)
+* **Space Complexity:** O(log n) (recursive stack)
+* **Key Points for Interviews:**
+
+  * Unstable sort → equal elements may change relative order.
+  * In-place → does not need extra array.
+  * Pivot choice affects performance drastically.
+  * Tail recursion optimization possible.
+
+---
+
+💡 **Pro Tip for Interviews:**
+If they ask “Merge Sort vs Quick Sort”:
+
+* Merge sort → stable, guaranteed O(n log n), needs extra space.
+* Quick sort → faster on average, in-place, but worst-case O(n²) if pivot is bad.
+
+-----------------------------------------------------------------------------------------------------
+**Stable vs Unstable sort** is all about **what happens to equal elements**.
+
+---
+
+### **Stable Sort**
+
+* If two elements are equal, a stable sort **keeps them in the same order they appeared in the original array**.
+* **Example:**
+  Original: `[A(5), B(3), C(5)]` → sorting by number → `[B(3), A(5), C(5)]`
+  Notice `A(5)` comes **before** `C(5)` like in the original array → **stable**.
+* **Merge Sort** is **stable**.
+
+---
+
+### **Unstable Sort**
+
+* If two elements are equal, an unstable sort **may change their original order**.
+* **Example:**
+  Original: `[A(5), B(3), C(5)]` → sorting by number → `[B(3), C(5), A(5)]`
+  `C(5)` comes **before** `A(5)` now → **unstable**.
+* **Quick Sort** is usually **unstable** (unless you do extra work).
+
+---
+
+💡 **Simple way to remember:**
+
+* **Stable = Safe, original order preserved for equals.**
+* **Unstable = “anything can happen” for equals.**
+
+---
+

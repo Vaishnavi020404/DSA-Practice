@@ -1,0 +1,36 @@
+Strings are sorted in **alphabetical order**, also known as **lexicographical order**. This is the same way you would look up words in a dictionary. Here's how it works:
+
+1.  **Character by Character Comparison**: The sorting algorithm compares two strings by looking at their characters one by one, from left to right.
+
+2.  **First Mismatch**: The first time two characters at the same position are different, the string with the character that comes first in the alphabet is considered "smaller" and is placed earlier in the sorted list.
+
+    * **Example**: "apple" vs. "apply"
+        * 'a' vs. 'a' (same)
+        * 'p' vs. 'p' (same)
+        * 'p' vs. 'p' (same)
+        * 'l' vs. 'l' (same)
+        * 'e' vs. 'y' (different)
+        * Since 'e' comes before 'y' in the alphabet, "apple" comes before "apply".
+
+3.  **Handling Different Lengths**: If one string is a prefix of the other, the shorter string comes first.
+
+    * **Example**: "flow" vs. "flower"
+        * 'f' vs. 'f' (same)
+        * 'l' vs. 'l' (same)
+        * 'o' vs. 'o' (same)
+        * 'w' vs. 'w' (same)
+        * At this point, "flow" has no more characters. Since "flower" is longer, "flow" is considered smaller and comes first.
+
+This character-by-character comparison is based on the character's numerical value, specifically its **Unicode value** in Java. For the standard English alphabet, this is the same as alphabetical order.
+
+
+A **vertical scan** is a method for solving the "Longest Common Prefix" problem. Instead of comparing strings to each other, you compare characters at the same position across **all** strings.
+
+### How it Works
+1.  You take the first character of the first string.
+2.  You then check the first character of all other strings in the array.
+3.  If all of them match, you move on to the second character of the first string.
+4.  You repeat the process, checking the second character of all other strings.
+5.  The moment a character does not match across all strings, you stop. The characters you've successfully checked so far form the longest common prefix.
+
+This is often called a **brute-force** approach because it's a straightforward, logical way to solve the problem without any special tricks. The time complexity is $O(N \cdot M)$, where $N$ is the number of strings and $M$ is the length of the shortest string.
