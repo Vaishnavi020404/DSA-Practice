@@ -1,4 +1,4 @@
-// LeetCode Problem: 283. Move Zeroes  
+// LeetCode Problem: 283. Move Zeroes,resolved on 11/2/26
 // Link: https://leetcode.com/problems/move-zeroes/  
 // Approach: Two Pointer Approach  
 // Time Complexity: O(n) — Single pass through the array  
