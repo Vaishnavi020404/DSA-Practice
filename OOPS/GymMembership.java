@@ -2,10 +2,11 @@
 package OOPS;
 import java.util.*;
 
+ArrayList<Member> Members=new ArrayList<>();
+
 public class GymMembership {
     public static void main(String[] args) {
 
-        ArrayList<Member> Members=new ArrayList<>();
 
         Scanner sc=new Scanner(System.in);
 
@@ -24,13 +25,25 @@ public class GymMembership {
             System.out.println("Enter the monthlyFee of member:");
             double monthlyFee=sc.nextDouble();
 
-            members.add(new Member(name,memberId,age,membershipType,monthlyFee));
+            Members.add(new Member(name,memberId,age,membershipType,monthlyFee));
 
             //OR
             //Member m=new Member(sc.next(),sc.next(),sc.nextInt(),sc.next(),sc.nextDouble());
 
+
+            //output
             System.out.println("Enter the type of memebership to get the members: ");
             getMembersByType(sc.next());
+
+            System.out.println("The total revenue for this month is:" + getTotalRevenue());
+
+            System.out.println("The average age of all the members is: "+ getAverageAge());
+
+            System.out.println("The oldest member of all the members is " + getOldestMember());
+
+            
+
+
 
 
         }
